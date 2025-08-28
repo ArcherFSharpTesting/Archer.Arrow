@@ -14,7 +14,7 @@ type ITestBuilder<'featureType> =
         inherit ITestBuilderNameTags<'featureType>
         inherit ITestBuilderNameSetup<'featureType>
         inherit ITestBuilderNameDataTeardown<'featureType>
-        inherit ITestBuilderData<'featureType>
+        inherit ITestBuilderNameData<'featureType>
         inherit ITestBuilderName<'featureType>
 
         // -- tags, setup, data, test body, teardown
