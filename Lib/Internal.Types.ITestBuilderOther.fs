@@ -6,20 +6,8 @@ open Archer.Arrows
 open Archer.CoreTypes.InternalTypes
 open Archer.Arrows.Internal.Types
 
-type ITestBuilderOther<'featureType> =
+type ITestBuilderData<'featureType> =
     interface
-        inherit ITestBuilderBase<'featureType>
-        inherit ITestBuilderNameTagsSetup<'featureType>
-        inherit ITestBuilderNameTagsData<'featureType>
-        inherit ITestBuilderNameTags<'featureType>
-        inherit ITestBuilderNameSetup<'featureType>
-        inherit ITestBuilderNameDataTeardown<'featureType>
-        inherit ITestBuilderNameData<'featureType>
-        inherit ITestBuilderName<'featureType>
-        inherit ITestBuilderTagsSetup<'featureType>
-        inherit ITestBuilderTagsData<'featureType>
-        inherit ITestBuilder<'featureType>
-
         // -- data, test body, teardown
         (*078*) abstract member Test: data: DataIndicator<'dataType> * testBody: TestBodyIndicator<TestFunctionThreeParameters<'dataType, 'featureType, TestEnvironment>> * teardown: TeardownIndicator<unit> * [<CallerMemberName; Optional; DefaultParameterValue("")>] testName: string * [<CallerFilePath; Optional; DefaultParameterValue("")>] fileFullName: string * [<CallerLineNumber; Optional; DefaultParameterValue(-1)>] lineNumber: int -> ITest list
         (*079*) abstract member Test: data: DataIndicator<'dataType> * testBody: TestBodyIndicator<TestFunctionTwoParameters<'dataType, 'featureType>> * teardown: TeardownIndicator<unit> * [<CallerMemberName; Optional; DefaultParameterValue("")>] testName: string * [<CallerFilePath; Optional; DefaultParameterValue("")>] fileFullName: string * [<CallerLineNumber; Optional; DefaultParameterValue(-1)>] lineNumber: int -> ITest list
@@ -34,6 +22,23 @@ type ITestBuilderOther<'featureType> =
         (*084*) abstract member Test: data: DataIndicator<'dataType> * testBody: TestFunctionThreeParameters<'dataType, 'featureType, TestEnvironment> * [<CallerMemberName; Optional; DefaultParameterValue("")>] testName: string * [<CallerFilePath; Optional; DefaultParameterValue("")>] fileFullName: string * [<CallerLineNumber; Optional; DefaultParameterValue(-1)>] lineNumber: int -> ITest list
         (*085*) abstract member Test: data: DataIndicator<'dataType> * testBody: TestFunctionTwoParameters<'dataType, 'featureType> * [<CallerMemberName; Optional; DefaultParameterValue("")>] testName: string * [<CallerFilePath; Optional; DefaultParameterValue("")>] fileFullName: string * [<CallerLineNumber; Optional; DefaultParameterValue(-1)>] lineNumber: int -> ITest list
         (*086*) abstract member Test: data: DataIndicator<'dataType> * testBody: TestFunction<'dataType> * [<CallerMemberName; Optional; DefaultParameterValue("")>] testName: string * [<CallerFilePath; Optional; DefaultParameterValue("")>] fileFullName: string * [<CallerLineNumber; Optional; DefaultParameterValue(-1)>] lineNumber: int -> ITest list
+    end
+
+type ITestBuilderOther<'featureType> =
+    interface
+        inherit ITestBuilderBase<'featureType>
+        inherit ITestBuilderNameTagsSetup<'featureType>
+        inherit ITestBuilderNameTagsData<'featureType>
+        inherit ITestBuilderNameTags<'featureType>
+        inherit ITestBuilderNameSetup<'featureType>
+        inherit ITestBuilderNameDataTeardown<'featureType>
+        inherit ITestBuilderNameData<'featureType>
+        inherit ITestBuilderName<'featureType>
+        inherit ITestBuilderTagsSetup<'featureType>
+        inherit ITestBuilderTagsData<'featureType>
+        inherit ITestBuilder<'featureType>
+        inherit ITestBuilderSetup<'featureType>
+        inherit ITestBuilderData<'featureType>
 
         // -- test body, teardown
         (*087*) abstract member Test: testBody: TestBodyIndicator<TestFunctionTwoParameters<'featureType, TestEnvironment>> * teardown: TeardownIndicator<unit> * [<CallerMemberName; Optional; DefaultParameterValue("")>] testName: string * [<CallerFilePath; Optional; DefaultParameterValue("")>] fileFullName: string * [<CallerLineNumber; Optional; DefaultParameterValue(-1)>] lineNumber: int -> ITest
