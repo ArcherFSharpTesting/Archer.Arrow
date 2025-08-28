@@ -25,6 +25,7 @@
     <Compile Include="Internal.Types.ITestBuilderNameData.fs" />
     <Compile Include="Internal.Types.ITestBuilderName.fs" />
     <Compile Include="Internal.Types.ITestBuilderTagsSetup.fs" />
+    <Compile Include="Internal.Types.ITestBuilderTagsData.fs" />
     <Compile Include="Internal.Types.ITestBuilder.fs" />
     <Compile Include="Internal.Types.IFeature.fs" />
     <Compile Include="Internal.Types.Feature.fs" />
