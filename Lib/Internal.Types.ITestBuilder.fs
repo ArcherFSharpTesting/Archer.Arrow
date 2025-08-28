@@ -13,7 +13,7 @@ type ITestBuilder<'featureType> =
         inherit ITestBuilderNameTagsData<'featureType>
         inherit ITestBuilderNameTags<'featureType>
         inherit ITestBuilderNameSetup<'featureType>
-        inherit ITestBuilderNameData<'featureType>
+        inherit ITestBuilderNameDataTeardown<'featureType>
 
         // -- test name, data, test body
         (*035*) abstract member Test: testName: string * data: DataIndicator<'dataType> * testBody: TestBodyIndicator<TestFunctionThreeParameters<'dataType, 'featureType, TestEnvironment>> * [<CallerFilePath; Optional; DefaultParameterValue("")>] fileFullName: string * [<CallerLineNumber; Optional; DefaultParameterValue(-1)>] lineNumber: int -> ITest list
