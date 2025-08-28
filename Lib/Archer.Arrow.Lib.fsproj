@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Internal.Types.ITestBuilder.fs" />
     <Compile Include="Types.fs" />
     <Compile Include="Internals.fs" />
     <Compile Include="InternalTypes.IBuilder.fs" />
@@ -27,6 +26,7 @@
     <Compile Include="Internal.Types.ITestBuilderName.fs" />
     <Compile Include="Internal.Types.ITestBuilderTagsSetup.fs" />
     <Compile Include="Internal.Types.ITestBuilderTagsData.fs" />
+    <Compile Include="Internal.Types.ITestBuilder.fs" />
     <Compile Include="Internal.Types.ITestBuilderOther.fs" />
     <Compile Include="Internal.Types.IFeature.fs" />
     <Compile Include="Internal.Types.Feature.fs" />

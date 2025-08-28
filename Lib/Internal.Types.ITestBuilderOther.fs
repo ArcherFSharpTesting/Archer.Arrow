@@ -6,6 +6,10 @@ open Archer.Arrows
 open Archer.CoreTypes.InternalTypes
 open Archer.Arrows.Internal.Types
 
+type ITestBuilderSetup<'featureType> =
+    interface
+    end
+
 type ITestBuilderOther<'featureType> =
     interface
         inherit ITestBuilderBase<'featureType>
@@ -18,6 +22,7 @@ type ITestBuilderOther<'featureType> =
         inherit ITestBuilderName<'featureType>
         inherit ITestBuilderTagsSetup<'featureType>
         inherit ITestBuilderTagsData<'featureType>
+        inherit ITestBuilder<'featureType>
 
         // -- setup, data, test body, teardown
         (*070*) abstract member Test: setup: SetupIndicator<'featureType, 'setupType> * data: DataIndicator<'dataType> * testBody: TestBodyIndicator<TestFunctionThreeParameters<'dataType, 'setupType, TestEnvironment>> * teardown: TeardownIndicator<'setupType> * [<CallerMemberName; Optional; DefaultParameterValue("")>] testName: string * [<CallerFilePath; Optional; DefaultParameterValue("")>] fileFullName: string * [<CallerLineNumber; Optional; DefaultParameterValue(-1)>] lineNumber: int -> ITest list
