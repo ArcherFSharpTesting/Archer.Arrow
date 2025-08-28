@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="Internal.Types.ITestBuilder.fs" />
     <Compile Include="Types.fs" />
     <Compile Include="Internals.fs" />
     <Compile Include="InternalTypes.IBuilder.fs" />
