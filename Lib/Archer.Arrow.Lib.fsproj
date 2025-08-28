@@ -17,9 +17,9 @@
     <Compile Include="Internals.fs" />
     <Compile Include="InternalTypes.IBuilder.fs" />
     <Compile Include="Internal.Types.ITestBuilderBase.fs" />
-    <Compile Include="Internal.Types.ITestBuilderTagsSetup.fs" />
-    <Compile Include="Internal.Types.ITestBuilderTagsData.fs" />
-    <Compile Include="Internal.Types.ITestBuilderTags.fs" />
+    <Compile Include="Internal.Types.ITestBuilderNameTagsSetup.fs" />
+    <Compile Include="Internal.Types.ITestBuilderNameTagsData.fs" />
+    <Compile Include="Internal.Types.ITestBuilderNameTags.fs" />
     <Compile Include="Internal.Types.ITestBuilder.fs" />
     <Compile Include="Internal.Types.IFeature.fs" />
     <Compile Include="Internal.Types.Feature.fs" />

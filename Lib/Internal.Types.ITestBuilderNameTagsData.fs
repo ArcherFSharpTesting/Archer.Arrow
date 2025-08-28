@@ -5,7 +5,7 @@ open System.Runtime.InteropServices
 open Archer.Arrows
 open Archer.CoreTypes.InternalTypes
 
-type public ITestBuilderTagsData<'featureType> =
+type public ITestBuilderNameTagsData<'featureType> =
     interface
         // -- test name, tags, data, test body, teardown
         (*009*) abstract member Test: testName: string * tags: TagsIndicator * data: DataIndicator<'dataType> * testBody: TestBodyIndicator<TestFunctionThreeParameters<'dataType, 'featureType, TestEnvironment>> * teardown: TeardownIndicator<unit> * [<CallerFilePath; Optional; DefaultParameterValue("")>] fileFullName: string * [<CallerLineNumber; Optional; DefaultParameterValue(-1)>] lineNumber: int -> ITest list
