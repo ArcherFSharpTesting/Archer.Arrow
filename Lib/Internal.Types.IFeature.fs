@@ -8,7 +8,7 @@ open Archer.CoreTypes.InternalTypes
 
 type IFeature<'featureType> =
     interface
-        inherit ITestBuilder<'featureType>
+        inherit ITestBuilderOther<'featureType>
         abstract member FeatureTags: TestTag list with get
         abstract member GetTests: unit -> ITest list
 
